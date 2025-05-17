@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.6.0-web/css/all.min.css">
+    <title>Akira</title>
+    <link rel="stylesheet" href="css/estilosBase.css">
+    <link rel="stylesheet" href="css/estilosCarrito.css">
+    <link rel="icon" href="Imagenes/alaicon.jpg">
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <a href="Index.html">
+            <img src="imagenes/Index/logo.png" alt="Logo" class="logo-image">
+        </a>
+        <div class="logo-circle"></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="Quienessomos.html">Quiénes somos</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Soporte.html">Soporte</a></li>
+
+        <div class="container-cart">
+            <div class="containerCart-icon" style="display: none;">
+                <div class="icon-cart">
+                    <img src="imagenes/Productos/carrito-de-compras.png" alt="cart">
+                </div>
+                <div class="count-products">
+                    <span id="products-count">0</span>
+                </div>
+            </div>
+
+            <div class="containerCart-product hidden-cart">
+                <div class="cart-product">
+                    <div class="info-product" style="font-size: 12px; font-weight: bold;">
+                        <span>Qty</span>
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="row-product">
+                </div>
+                <div class="cart-total">
+                    <div class="summary">
+                        <a href="Carrito.html">Ver carrito</a>
+                    </div>
+                    <div class="quantities">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">S/0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ul>
+</nav>
+
+<section>
+    <div class="container mt-5">
+        <!-- Título del carrito -->
+        <h2 class="mb-4">Carrito de Compras</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="row mb-4 cart-container" style="width: 70%;"></div>
+
+            <!-- Resumen del total -->
+            <div class="row" style="width: 30%; margin-bottom: 20px;">
+                <div class="col-12">
+                    <div class="card-resumen">
+                        <div class="card-body">
+                            <h5 class="card-title">Resumen de tu compra</h5>
+                            <p class="card-text">Subtotal: <strong class="subtotal">S/ 0.0</strong></p>
+                            <p class="card-text">IGV: <strong class="igv">S/ 0.0</strong></p>
+                            <p class="card-text">Total a pagar: <strong class="total">S/ 0.0</strong></p>
+                            <a href="Datos.html" class="btn btn-danger btn-block">Continuar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div id="container_module_footer">
+        <div class="center">
+            <div class="row_footer">
+                <div class="column_logo_footer">
+                    <div class="logos">
+                        <a href=""><img src="imagenes/Index/logo.png" alt=""/></a>
+                    </div>
+                    <div class="text">
+                        <p>Buscanos:</p>
+                    </div>
+                    <div class="social_footer">
+                        <a href=""><img src="imagenes/Index/social-1.svg" alt=""/></a>
+                        <a href=""><img src="imagenes/Index/social-3.svg" alt=""/></a>
+                        <a href=""><img src="imagenes/Index/linkedinFooter.png" alt=""/></a>
+                    </div>
+                </div>
+                <div class="column_menu_footer">
+                    <ul>
+                        <li>
+                            <h3>MENÚ</h3>
+                            <div class="link_footer">
+                                <ul>
+                                    <li><a href="Quienessomos.html">Quienes somos</a></li>
+                                    <li><a href="Productos.html">Productos</a></li>
+                                    <li><a href="Soporte.html">Soporte</a></li>
+                                    <li><a href="Soporte.html">Contáctanos</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>PRODUCTOS</h3>
+                            <div class="links_enlaces">
+                                <ul>
+                                    <li><a href="Pcgamer.html">Pc gamer</a></li>
+                                    <li><a href="Laptops.html">Laptops</a></li>
+                                    <li><a href="Celular.html">Celular</a></li>
+                                    <li><a href="Televisores.html">Televisores</a></li>
+                                    <li><a href="Productos.html">Accesorios</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>MEDIOS DE PAGO</h3>
+                            <div class="newletter">
+                                <img src="imagenes/Index/MetodosPago.png" alt=""/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row_copy">
+                <div>
+                    <span>© 2024 AKIRA All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/carrito.js"></script>
+
+<script>
+  let cartProducts = [];
+  document.addEventListener('DOMContentLoaded', function () {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+      cartProducts = JSON.parse(savedCart);
+      renderCartItems();
+    }
+
+    const currentPath = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute('href');
+      if (linkPath === currentPath) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  const renderCartItems = () => {
+    const cartContainer = document.querySelector('.cart-container');
+    cartContainer.innerHTML = '';
+
+    if (!cartProducts.length) {
+      cartContainer.innerHTML = `<p class="cart-empty"> El carrito está vacio</p>`;
+      updateCartSummary(0, 0, 0);
+    }
+
+    let subtotal = 0;
+    cartProducts.forEach(product => {
+      const colItem = document.createElement('div');
+      colItem.classList.add('col-12');
+      colItem.innerHTML = `<div class="cart-item">
+      <div class="d-flex align-items-center">
+        <img src="${product.image}" alt="Producto">
+        <div class="item-info">
+          <h5>${product.title}</h5>
+          <p>Precio unitario: S/ ${product.price.toFixed(2)}</p>
+          <p>Precio total: S/ ${(product.price * product.quantity).toFixed(2)}</p>
+        </div>
+      </div>
+      <div class="quantity-control">
+        <span class="mr-2">Cantidad: </span>
+        <button class="btn-minus" data-id="${product.id}">-</button>
+        <span class="quantity">${product.quantity}</span>
+        <button class="btn-plus-cart" data-id="${product.id}">+</button>
+      </div>
+      <span class="btn-close" data-id="${product.id}" title="Eliminar">x</span>
+      </div>
+    `;
+      cartContainer.appendChild(colItem);
+      subtotal += product.price * product.quantity;
+    });
+
+    const igv = subtotal * 0.18;
+    const total = subtotal + igv;
+
+    updateCartSummary(subtotal, igv, total);
+  };
+
+  const updateCartSummary = (subtotal, igv, total) => {
+    document.querySelector('.subtotal').textContent = `S/ ${subtotal.toFixed(2)}`;
+    document.querySelector('.igv').textContent = `S/ ${igv.toFixed(2)}`;
+    document.querySelector('.total').textContent = `S/ ${total.toFixed(2)}`;
+  };
+
+  document.addEventListener('click', e => {
+    if (e.target.classList.contains('btn-close')) {
+      const productId = e.target.getAttribute('data-id');
+      allProducts = allProducts.filter(product => product.id != productId);
+      cartProducts = cartProducts.filter(product => product.id != productId);
+      renderCartItems();
+      saveCartToLocalStorage();
+    }
+    if (e.target.classList.contains('btn-plus-cart')) {
+        const productId = e.target.getAttribute('data-id');
+        const product = allProducts.find(product => product.id == productId);
+        const productInCart = cartProducts.find(product => product.id == productId);
+        if (productInCart) {
+            productInCart.quantity++;
+            product.quantity++;
+        } else {
+            cartProducts.push({ ...productInCart, quantity: 1 });
+            allProducts.push({ ...product, quantity: 1 });
+        }
+        renderCartItems();
+        saveCartToLocalStorage();
+    }
+    if (e.target.classList.contains('btn-minus')) {
+        const productId = e.target.getAttribute('data-id');
+        const product = allProducts.find(product => product.id == productId);
+        const productInCart = cartProducts.find(product => product.id == productId);
+        if (productInCart && productInCart.quantity > 1) {
+            productInCart.quantity--;
+            product.quantity--;
+        } else {
+          allProducts = allProducts.filter(product => product.id != productId);
+          cartProducts = cartProducts.filter(product => product.id != productId);
+        }
+        renderCartItems();
+        saveCartToLocalStorage();
+    }
+  });
+
+</script>
+
+</body>
+</html>

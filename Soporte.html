@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.6.0-web/css/all.min.css">
+    <title>Akira</title>
+    <link rel="icon" href="Imagenes/alaicon.jpg">
+    <link rel="stylesheet" href="css/estilosBase.css">
+    <link rel="stylesheet" href="css/estilossoportex.css">
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <a href="Index.html">
+            <img src="imagenes/Index/logo.png" alt="Logo" class="logo-image">
+        </a>
+        <div class="logo-circle"></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="Quienessomos.html">Quiénes somos</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Soporte.html">Soporte</a></li>
+
+        <div class="container-cart">
+            <div class="containerCart-icon">
+                <div class="icon-cart">
+                    <img src="imagenes/Productos/carrito-de-compras.png" alt="cart">
+                </div>
+                <div class="count-products">
+                    <span id="products-count">0</span>
+                </div>
+            </div>
+
+            <div class="containerCart-product hidden-cart">
+                <div class="cart-product">
+                    <div class="info-product" style="font-size: 12px; font-weight: bold;">
+                        <span>Qty</span>
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="row-product">
+                </div>
+                <div class="cart-total">
+                    <div class="summary">
+                        <a href="Carrito.html">Ver carrito</a>
+                    </div>
+                    <div class="quantities">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">S/0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1>Bienvenido a nuestro Centro de Soporte</h1>
+    <p>Estamos aquí para ayudarte con cualquier problema o duda que tengas sobre nuestros productos</p>
+
+    <div class="support-options">
+        <div class="support-option">
+            <h3>SOPORTE TÉCNICO</h3>
+            <p>Llámanos para obtener ayuda inmediata</p>
+            <p>Teléfono: <a href="tel:123-456-7890">123-456-7890</a></p>
+        </div>
+        <div class="support-option">
+            <h3>PREGUNTAS FRECUENTES</h3>
+            <p>Encuentra respuestas rápidas a las preguntas más comunes.</p>
+        </div>
+        <div class="support-option">
+            <h3>Estamos aquí para ayudarte con cualquier problema o duda que tengas sobre nuestros productos</h3>
+            <button id="contact-btn"
+                    style="background-color:#CF0A7E; color: white; border: none; padding: 10px 20px; border-radius: 5px;margin-top:12px; cursor: pointer ; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                Contáctanos
+            </button>
+        </div>
+        <div class="support-option">
+            <h3>Chat en Vivo</h3>
+            <p style="margin-bottom:3em ;">Habla directamente con uno de nuestros agentes de soporte</p>
+            <a target="_blank" href="https://web.whatsapp.com/" id="chat-btn"
+               style="background-color:#CF0A7E; color: white; border: none; padding: 10px 20px; border-radius: 5px;margin-top:12px; cursor: pointer;font-family: Verdana, Geneva, Tahoma, sans-serif;"><u>
+                INICIAR CHAT</u> </a>
+        </div>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.775042955302!2d-77.06365662493975!3d-11.990061888242309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce53c69e3575%3A0x586e76dff7534a44!2sCIBERTEC!5e0!3m2!1ses-419!2spe!4v1728928557859!5m2!1ses-419!2spe"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="faq" id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>¿Cuáles son las formas de pago aceptadas?</span>
+                <span>➤</span>
+            </div>
+            <div class="faq-answer">
+                Aceptamos pagos con tarjeta de crédito (Visa, Mastercard, American Express), débito, transferencias
+                bancarias y pagos en efectivo.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>¿Cuál es la política de devoluciones y garantías?</span>
+                <span>➤</span>
+            </div>
+            <div class="faq-answer">
+                Ofrecemos una garantía de 30 días en todos nuestros productos. Si el producto presenta algún defecto de
+                fabricación, puedes solicitar un cambio o reembolso. Para conocer los términos y condiciones completos,
+                consulta nuestra política de devoluciones.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>¿Ofrecen algún tipo de descuento o promoción?</span>
+                <span>➤</span>
+            </div>
+            <div class="faq-answer">
+                Sí, regularmente ofrecemos descuentos y promociones especiales en nuestra página web y en nuestras redes
+                sociales. Suscríbete a nuestro newsletter para estar al tanto de todas nuestras ofertas.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>¿Qué tipos de computadoras venden?</span>
+                <span>➤</span>
+            </div>
+            <div class="faq-answer">
+                Vendemos una amplia variedad de computadoras, desde potentes equipos de escritorio para gaming y diseño
+                gráfico, hasta laptops ultradelgadas y ligeras para estudiantes y profesionales en movimiento. También
+                ofrecemos todo en uno y servidores para pequeñas empresas.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contáctanos</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="issue-type">Tipo de Problema:</label>
+                <select id="issue-type" name="issue-type" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="technical">Problema Técnico</option>
+                    <option value="order">Consulta sobre Pedido</option>
+                    <option value="return">Devolución/Reembolso</option>
+                    <option value="other">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enviar Mensaje</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div id="container_module_footer">
+        <div class="center">
+            <div class="row_footer">
+                <div class="column_logo_footer">
+                    <div class="logos">
+                        <a href="Index.html"><img src="imagenes/Index/logo.png" alt=""/></a>
+                    </div>
+                    <div class="text">
+                        <p>Buscanos:</p>
+                    </div>
+                    <div class="social_footer">
+                        <a href=""><img src="imagenes/Index/social-1.svg" alt=""/></a>
+                        <a href=""><img src="imagenes/Index/social-3.svg" alt=""/></a>
+                        <a href=""><img src="imagenes/Index/linkedinFooter.png" alt=""/></a>
+                    </div>
+                </div>
+                <div class="column_menu_footer">
+                    <ul>
+                        <li>
+                            <h3>MENÚ</h3>
+                            <div class="link_footer">
+                                <ul>
+                                    <li><a href="Quienessomos.html">Quienes somos</a></li>
+                                    <li><a href="Productos.html">Productos</a></li>
+                                    <li><a href="Soporte.html">Soporte</a></li>
+                                    <li><a href="Soporte.html">Contáctanos</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>PRODUCTOS</h3>
+                            <div class="links_enlaces">
+                                <ul>
+                                    <li><a href="Pcgamer.html">Pc gamer</a></li>
+                                    <li><a href="Laptops.html">Laptops</a></li>
+                                    <li><a href="Celular.html">Celular</a></li>
+                                    <li><a href="Televisores.html">Televisores</a></li>
+                                    <li><a href="Productos.html">Accesorios</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>MEDIOS DE PAGO</h3>
+                            <div class="newletter">
+                                <img src="imagenes/Index/MetodosPago.png" alt=""/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row_copy">
+                <div>
+                    <span>© 2024 AKIRA All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/carrito.js"></script>
+<script src="js/general.js"></script>
+<script>
+  // Modal
+  var modal = document.getElementById("contact-modal");
+  var btn = document.getElementById("contact-btn");
+  var span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // FAQ toggle
+  var faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(function (question) {
+    question.addEventListener('click', function () {
+      var answer = this.nextElementSibling;
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+        this.querySelector('span:last-child').textContent = '➤';
+      } else {
+        answer.style.display = "block";
+        this.querySelector('span:last-child').textContent = '▼';
+      }
+    });
+  });
+
+  // Form submission
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    // Aquí iría el código para enviar el formulario
+    alert('Formulario enviado con éxito!');
+    modal.style.display = "none";
+  });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.6.0-web/css/all.min.css">
+    <title>Akira</title>
+    <link rel="icon" href="Imagenes/alaicon.jpg">
+    <link rel="stylesheet" href="css/estilosBase.css">
+    <link rel="stylesheet" href="css/estilosProducto.css">
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <a href="Index.html">
+            <img src="imagenes/Index/logo.png" alt="Logo" class="logo-image">
+        </a>
+        <div class="logo-circle"></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="Quienessomos.html">Quiénes somos</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Soporte.html">Soporte</a></li>
+
+        <div class="container-cart">
+            <div class="containerCart-icon">
+                <div class="icon-cart">
+                    <img src="imagenes/Productos/carrito-de-compras.png" alt="cart">
+                </div>
+                <div class="count-products">
+                    <span id="products-count">0</span>
+                </div>
+            </div>
+
+            <div class="containerCart-product hidden-cart">
+                <div class="cart-product">
+                    <div class="info-product" style="font-size: 12px; font-weight: bold;">
+                        <span>Qty</span>
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="row-product">
+                </div>
+                <div class="cart-total">
+                    <div class="summary">
+                        <a href="Carrito.html">Ver carrito</a>
+                    </div>
+                    <div class="quantities">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">S/0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ul>
+</nav>
+
+<section>
+    <div id="container-module-products">
+        <div class="center">
+            <div class="row-products">
+                <div class="links-products">
+                    <ul>
+                        <li><a href="Pcgamer.html">Pc gamer</a></li>
+                        <li><a href="Laptops.html">Laptops</a></li>
+                        <li><a href="Celular.html">Celular</a></li>
+                        <li><a href="Televisores.html">Televisores</a></li>
+                        <li><a href="Productos.html">Accesorios</a></li>
+                    </ul>
+                </div>
+
+                <div id="container-module-cart">
+                    <div class="row-cart">
+                        <div class="row-title">
+                            <div class="title">
+                                <h2>TELEVISORES</h2>
+                            </div>
+                        </div>
+
+                        <!--Products-->
+                        <div id="product-list" class="container-item-cart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div id="container_module_footer">
+        <div class="center">
+            <div class="row_footer">
+                <div class="column_logo_footer">
+                    <div class="logos">
+                        <a href="Index.html"><img src="imagenes/Index/logo.png" alt=""/></a>
+                    </div>
+                    <div class="text">
+                        <p>Buscanos:</p>
+                    </div>
+                    <div class="social_footer">
+                        <a href=""><img src="imagenes/Index/social-1.svg" alt=""/></a>
+                        <a href=""><img src="imagenes/Index/social-3.svg" alt=""/></a>
+                        <a href=""><img src="imagenes/Index/linkedinFooter.png" alt=""/></a>
+                    </div>
+                </div>
+                <div class="column_menu_footer">
+                    <ul>
+                        <li>
+                            <h3>MENÚ</h3>
+                            <div class="link_footer">
+                                <ul>
+                                    <li><a href="Quienessomos.html">Quienes somos</a></li>
+                                    <li><a href="Productos.html">Productos</a></li>
+                                    <li><a href="Soporte.html">Soporte</a></li>
+                                    <li><a href="Soporte.html">Contáctanos</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>PRODUCTOS</h3>
+                            <div class="links_enlaces">
+                                <ul>
+                                    <li><a href="Pcgamer.html">Pc gamer</a></li>
+                                    <li><a href="Laptops.html">Laptops</a></li>
+                                    <li><a href="Celular.html">Celular</a></li>
+                                    <li><a href="Televisores.html">Televisores</a></li>
+                                    <li><a href="Productos.html">Accesorios</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>MEDIOS DE PAGO</h3>
+                            <div class="newletter">
+                                <img src="imagenes/Index/MetodosPago.png" alt=""/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row_copy">
+                <div>
+                    <span>© 2024 AKIRA All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/carrito.js"></script>
+<script src="js/general.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const data = [
+      {
+        id: 37,
+        name: "Televisor 65 Crystal Uhd Du8000 4k Tizen Os Smart Tv (2024)",
+        price: 1899,
+        image: "imagenes/Productos/TV1.avif"
+      },
+      {
+        id: 38,
+        name: "Televisor Hisense Qled 50 50q6n 4k Google Tv",
+        price: 1099,
+        image: "imagenes/Productos/TV2.avif"
+      },
+      {
+        id: 39,
+        name: "Televisor Jvc 70\" Isdbt 4k Uhd Google Tv Os",
+        price: 1799,
+        image: "imagenes/Productos/TV3.avif"
+      },
+      {
+        id: 40,
+        name: "Televisor 55\" Lg Nanocell 4k Thinq Ai 55nano80tsa (2024)",
+        price: 1749,
+        image: "imagenes/Productos/TV4.avif"
+      },
+      {
+        id: 41,
+        name: "Televisor JVC 32\" ISDBT HD Android 11 OS",
+        price: 479,
+        image: "imagenes/Productos/TV5.avif"
+      },
+      {
+        id: 42,
+        name: "Televisor 55 Qled 4k Q60d Tizen Os Smart Tv (2024)",
+        price: 1999,
+        image: "imagenes/Productos/TV6.avif"
+      },
+      {
+        id: 43,
+        name: "Televisor Hyundai LED 50\" HYLED5020G4 Google TV",
+        price: 1168,
+        image: "imagenes/Productos/TV7.avif"
+      },
+      {
+        id: 44,
+        name: "Televisor JVC LED 43'' 4K UHD Android TV LT-43KB628",
+        price: 699,
+        image: "imagenes/Productos/TV8.avif"
+      },
+      {
+        id: 45,
+        name: "Televisor JVC 50\" UHD 4K Google TV LT-50KB538",
+        price: 1099,
+        image: "imagenes/Productos/TV9.avif"
+      },
+      {
+        id: 46,
+        name: "Televisor JVC Led 58\" UHD Google Tv",
+        price: 1199,
+        image: "imagenes/Productos/TV10.avif"
+      },
+      {
+        id: 47,
+        name: "Televisor 55\" LG QNED 4K ThinQ AI 55QNED80TSA (2024)",
+        price: 2399,
+        image: "imagenes/Productos/TV11.avif"
+      },
+      {
+        id: 48,
+        name: "Televisor Samsung The Frame 50\" Qled 4k Qn50ls03bagxp",
+        price: 2499,
+        image: "imagenes/Productos/TV12.avif"
+      }
+    ];
+    const productList = document.getElementById('product-list');
+    data.forEach(product => {
+      const div = document.createElement('div');
+      div.classList.add('column-item');
+      div.innerHTML = `
+                        <div class="image">
+                                <img src="${product.image}" alt="${product.name}">
+                            </div>
+                            <div class="content">
+                                <h2>${product.name}</h2>
+                                <span>S/ ${product.price}</span>
+                                <button class="btn-add-cart" data-id="${product.id}">Añadir al carrito</button>
+                            </div>
+                    `;
+      productList.appendChild(div);
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.6.0-web/css/all.min.css">
+    <title>Akira</title>
+    <link rel="stylesheet" href="css/estilosBase.css">
+    <link rel="stylesheet" href="css/estilosCarrito.css">
+    <link rel="stylesheet" href="css/estilosDatos.css">
+    <link rel="icon" href="Imagenes/alaicon.jpg">
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <a href="Index.html">
+            <img src="imagenes/Index/logo.png" alt="Logo" class="logo-image">
+        </a>
+        <div class="logo-circle"></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="Quienessomos.html">Quiénes somos</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Soporte.html">Soporte</a></li>
+
+        <div class="container-cart">
+            <div class="containerCart-icon" style="display: none;">
+                <div class="icon-cart">
+                    <img src="imagenes/Productos/carrito-de-compras.png" alt="cart">
+                </div>
+                <div class="count-products">
+                    <span id="products-count">0</span>
+                </div>
+            </div>
+
+            <div class="containerCart-product hidden-cart">
+                <div class="cart-product">
+                    <div class="info-product" style="font-size: 12px; font-weight: bold;">
+                        <span>Qty</span>
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                    <span>&nbsp;</span>
+                </div>
+                <div class="row-product">
+                </div>
+                <div class="cart-total">
+                    <div class="summary">
+                        <a href="Carrito.html">Ver carrito</a>
+                    </div>
+                    <div class="quantities">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">S/0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ul>
+</nav>
+
+<section>
+    <div class="container mt-5">
+        <!-- Título del formulario -->
+        <h2 class="mb-4">Datos del Cliente</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="row mb-4" style="width: 70%;">
+                <form id="customer-form">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="email">Correo:</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="firstName">Nombre:</label>
+                            <input type="text" id="firstName" class="form-control" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="lastName">Apellidos:</label>
+                            <input type="text" id="lastName" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="documentType">Tipo de Documento:</label>
+                            <select id="documentType" class="form-control" required>
+                                <option value="DNI">DNI</option>
+                                <option value="Pass">Pasaporte</option>
+                                <option value="CE">Carnet de Extranjería</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="documentNumber">Número del Documento:</label>
+                            <input type="text" id="documentNumber" class="form-control" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="phone">Teléfono o Celular:</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="address">Dirección para la Entrega:</label>
+                            <input type="text" id="address" class="form-control" required>
+                        </div>
+                    </div>
+                    <div id="error-message" style="color: red; display: none;"></div>
+                </form>
+            </div>
+
+            <!-- Resumen del total -->
+            <div class="row" style="width: 30%; margin-bottom: 20px;">
+                <div class="col-12">
+                    <div class="card-resumen">
+                        <div class="card-body">
+                            <h5 class="card-title">Resumen de tu compra</h5>
+                            <p class="card-text">Subtotal: <strong class="subtotal">S/ 0.0</strong></p>
+                            <p class="card-text">IGV: <strong class="igv">S/ 0.0</strong></p>
+                            <p class="card-text">Total a pagar: <strong class="total">S/ 0.0</strong></p>
+                            <a href="Datos.html" id="save-data" class="btn btn-danger btn-block">Continuar al pago</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div id="container_module_footer">
+        <div class="center">
+            <div class="row_footer">
+                <div class="column_logo_footer">
+                    <div class="logos">
+                        <a href=""><img src="imagenes/Index/logo.png" alt=""/></a>
+                    </div>
+                    <div class="text">
+                        <p>Buscanos:</p>
+                    </div>
+                    <div class="social_footer">
+                        <a href=""><img src="imagenes/Index/social-1.svg" alt=""/></a>
+                        <a href=""><img src="imagenes/Index/social-3.svg" alt=""/></a>
+                        <a href=""><img src="imagenes/Index/linkedinFooter.png" alt=""/></a>
+                    </div>
+                </div>
+                <div class="column_menu_footer">
+                    <ul>
+                        <li>
+                            <h3>MENÚ</h3>
+                            <div class="link_footer">
+                                <ul>
+                                    <li><a href="Quienessomos.html">Quienes somos</a></li>
+                                    <li><a href="Productos.html">Productos</a></li>
+                                    <li><a href="Soporte.html">Soporte</a></li>
+                                    <li><a href="Soporte.html">Contáctanos</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>PRODUCTOS</h3>
+                            <div class="links_enlaces">
+                                <ul>
+                                    <li><a href="Pcgamer.html">Pc gamer</a></li>
+                                    <li><a href="Laptops.html">Laptops</a></li>
+                                    <li><a href="Celular.html">Celular</a></li>
+                                    <li><a href="Televisores.html">Televisores</a></li>
+                                    <li><a href="Productos.html">Accesorios</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>MEDIOS DE PAGO</h3>
+                            <div class="newletter">
+                                <img src="imagenes/Index/MetodosPago.png" alt=""/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row_copy">
+                <div>
+                    <span>© 2024 AKIRA All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 style="margin-bottom: 15px;">Pagar Pedido</h2>
+        <p style="margin-bottom: 15px;">Número de pedido: <span id="orderNumber"></span></p>
+
+        <div class="payment-options">
+            <div class="payment-option selected" data-option="card">
+                <img src="imagenes/icons/payIcon.jpg" alt="Tarjeta">
+                <p>Tarjeta</p>
+            </div>
+            <div class="payment-option" data-option="yape">
+                <img src="imagenes/icons/YAPE-removeb.png" alt="Yape">
+                <p>Yape</p>
+            </div>
+        </div>
+
+        <form class="payment-form" style="display: block;">
+            <input type="text" placeholder="Número de tarjeta" required>
+            <input type="text" placeholder="Caducidad" required>
+            <input type="text" placeholder="CVV" required>
+            <input type="text" placeholder="Nombres" id="paymentName" required>
+            <input type="text" placeholder="Apellidos" id="paymentLastName" required>
+            <input type="email" placeholder="Correo" id="paymentEmail" required>
+            <button type="submit" class="pay-button">Pagar S/ 0.0</button>
+        </form>
+
+        <form class="yape-form">
+            <img src="imagenes/icons/YAPEFOND.jpg" alt="Yape" class="yape-logo">
+            <div class="yape-instructions">
+                <p>Paga con tu Código de aprobación</p>
+                <p>Encuéntralo en el menú de tu app Yape.</p>
+                <p>Cópialo y pégalo abajo.</p>
+            </div>
+            <input type="tel" id="cellphone" class="yape-input" placeholder="Ingresa tu celular Yape" pattern="[0-9]{9}" required>
+            <input type="text" class="yape-input" placeholder="Código de aprobación" required>
+            <button type="submit" class="yape-pay-button">Pagar S/ 0.0</button>
+        </form>
+
+        <p>Powered by <img src="imagenes/icons/izypay.png" alt="Izipay" style="width: 100px; height: 20px;"></p>
+
+    </div>
+</div>
+
+<div id="thankYouModal" class="modal">
+    <div class="modal-content">
+        <h2>Muchas gracias por su compra</h2>
+        <p>Tu pedido ha sido procesado exitosamente.</p>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7-beta.19/jquery.inputmask.min.js"></script>
+<script src="js/carrito.js"></script>
+
+<script>
+  let cartProducts = [];
+  document.addEventListener('DOMContentLoaded', function () {
+
+    Inputmask("9999 9999 9999 9999").mask(document.querySelector('input[placeholder="Número de tarjeta"]'));
+    Inputmask("99/99").mask(document.querySelector('input[placeholder="Caducidad"]'));
+    Inputmask("999").mask(document.querySelector('input[placeholder="CVV"]'));
+
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+      cartProducts = JSON.parse(savedCart);
+      renderCartItems();
+    }
+
+    const currentPath = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute('href');
+      if (linkPath === currentPath) {
+        link.classList.add('active');
+      }
+    });
+
+    const btn = document.getElementById('save-data');
+    const errorMessageDiv = document.getElementById('error-message');
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      if (validateForm()) {
+        const customerData = {
+          email: document.getElementById('email').value,
+          firstName: document.getElementById('firstName').value,
+          lastName: document.getElementById('lastName').value,
+          documentType: document.getElementById('documentType').value,
+          documentNumber: document.getElementById('documentNumber').value,
+          phone: document.getElementById('phone').value,
+          address: document.getElementById('address').value
+        };
+
+        localStorage.setItem('customerData', JSON.stringify(customerData));
+        errorMessageDiv.style.display = 'none';
+
+        document.getElementById('paymentModal').style.display = 'block';
+        document.getElementById('orderNumber').textContent = Math.floor(Math.random() * 1000000).toString();
+        document.getElementById('paymentName').value = customerData.firstName;
+        document.getElementById('paymentLastName').value = customerData.lastName;
+        document.getElementById('paymentEmail').value = customerData.email;
+        document.getElementById('cellphone').value = customerData.phone;
+      } else {
+        errorMessageDiv.textContent = 'Por favor, complete todos los campos requeridos.';
+        errorMessageDiv.style.display = 'block';
+      }
+    });
+
+    function validateForm() {
+      const requiredFields = ['email', 'firstName', 'lastName', 'documentType', 'documentNumber', 'phone', 'address'];
+      for (let field of requiredFields) {
+        if (document.getElementById(field).value.trim() === '') {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    // Cerrar modal
+    document.querySelector('.close').addEventListener('click', function() {
+      document.getElementById('paymentModal').style.display = 'none';
+    });
+
+    // Cambiar opción de pago
+    document.querySelectorAll('.payment-option').forEach(function(option) {
+      option.addEventListener('click', function() {
+        document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('selected'));
+        this.classList.add('selected');
+
+        const selectedOption = this.getAttribute('data-option');
+        document.querySelector('.payment-form').style.display = selectedOption === 'card' ? 'block' : 'none';
+        document.querySelector('.yape-form').style.display = selectedOption === 'yape' ? 'block' : 'none';
+      });
+    });
+
+    // Prevenir envío del formulario de tarjeta (para demostración)
+    document.querySelector('.payment-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      showThankYouModal();
+    });
+
+    // Prevenir envío del formulario Yape (para demostración)
+    document.querySelector('.yape-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      showThankYouModal();
+    });
+
+    function showThankYouModal() {
+      document.getElementById('paymentModal').style.display = 'none';
+      document.getElementById('thankYouModal').style.display = 'block';
+      localStorage.removeItem('cart');
+      setTimeout(function() {
+        window.location.href = 'Productos.html';
+      }, 3000);
+    }
+
+  });
+
+  const renderCartItems = () => {
+    let subtotal = 0;
+    cartProducts.forEach(product => {
+      subtotal += product.price * product.quantity;
+    });
+
+    const igv = subtotal * 0.18;
+    const total = subtotal + igv;
+
+    updateCartSummary(subtotal, igv, total);
+  };
+
+  const updateCartSummary = (subtotal, igv, total) => {
+    document.querySelector('.subtotal').textContent = `S/ ${subtotal.toFixed(2)}`;
+    document.querySelector('.igv').textContent = `S/ ${igv.toFixed(2)}`;
+    document.querySelector('.total').textContent = `S/ ${total.toFixed(2)}`;
+    document.querySelector('.pay-button').textContent = `Pagar S/ ${total.toFixed(2)}`;
+    document.querySelector('.yape-pay-button').textContent = `Pagar S/ ${total.toFixed(2)}`;
+  };
+
+</script>
+
+</body>
+</html>

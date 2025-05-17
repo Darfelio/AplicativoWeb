@@ -1,0 +1,108 @@
+.quienes-somos {
+    text-align: center;
+    padding: 50px;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 4em;
+    margin-right: 11em;
+}
+
+header.header {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 45%;
+}
+
+.equipo, .valores {
+    margin-top: 30px;
+}
+
+.valores ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.valores li {
+    margin: 0 10px;
+}
+
+.header-text {
+    max-width: 60%;
+}
+
+.header-text h1 {
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+.header-text p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.team-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.mission-vision-team {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 40px;
+    border-bottom: 2px solid #ccc;
+}
+
+.mission, .vision, .team {
+    width: 30%;
+}
+
+.mission h2, .vision h2, .team h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.mission p, .vision p, .team p {
+    font-size: 14px;
+}
+
+.p {
+    margin-bottom: 1em;
+    font: 1.3em / 1.7em verdana;
+}
+
+.values {
+    display: flex;
+    justify-content: space-around;
+    background-color: #cecece;
+    color: white;
+    padding: 20px;
+}
+
+.value-item {
+    text-align: center;
+}
+
+.value-item img {
+    max-width: 50px;
+    height: auto;
+}
+
+.value-item p {
+    margin-top: 10px;
+    font-size: 16px;
+}
